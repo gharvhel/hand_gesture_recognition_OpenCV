@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 2.8)
+project( hand_gesture_recognition_v01 )
+find_package( OpenCV REQUIRED )
+add_executable( HandGestureRecognition hand_gesture_recognition.cpp )
+target_link_libraries( HandGestureRecognition ${OpenCV_LIBS} )
