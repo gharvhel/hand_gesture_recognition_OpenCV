@@ -23,8 +23,7 @@ int main(int argc, char **argv)
 	VideoCapture camera(0);
 	if (!camera.isOpened())
 	{
-		cout << "ERROR: could not opened camera" << endl;
-		return -1;
+		die("ERROR: could not opened camera");
 	}
 
 	// Variables
@@ -42,8 +41,7 @@ int main(int argc, char **argv)
 		{
 			if (camera.read(image1) == false)
 			{
-				cout << "ERROR: cannot read image" << endl;
-				return -1;
+				die("ERROR: cannot read image");
 			}
 
 			// Get dimension of images
