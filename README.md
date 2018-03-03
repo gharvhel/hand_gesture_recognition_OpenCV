@@ -117,74 +117,17 @@ The program takes in two images, and determines if the meaning of the sequence i
 
 | **Frame1**        | **Frame2**        | **Result**  |
 | ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-
-
-|(Palm, Center)|
-
-|(Fist, Center)|
-
-|SELECTED|
-
-(Fist, Center)
-
-(Palm, Center)
-
-CANCELLED
-
-(Fist, Center)
-
-(Palm, Center)
-
-MOVED TO UPPER LEFT
-
-(Fist, Center)
-
-(Palm, Center)
-
-MOVED TO UPPER MIDDLE
-
-(Fist, Center)
-
-(Palm, Center)
-
-MOVED TO UPPER RIGHT
-
-(Fist, Center)
-
-(Palm, Center)
-
-MOVED TO LEFT
-
-(Fist, Center)
-
-(Palm, Center)
-
-MOVED TO RIGHT
-
-(Fist, Center)
-
-(Palm, Center)
-
-MOVED TO LOWER LEFT
-
-(Fist, Center)
-
-(Palm, Center)
-
-MOVED TO LOWER MIDDLE
-
-(Fist, Center)
-
-(Palm, Center)
-
-MOVED TO LOWER RIGHT
-
-Anything else
-
-Anything else
-
-UNKNOWN
+|(Palm, Center)|(Fist, Center)| SELECTED
+|(Fist, Center)|(Palm, Center)|CANCELLED
+|(Fist, Center)|(Palm, Center)|MOVED TO UPPER LEFT
+|(Fist, Center)|(Palm, Center)|MOVED TO UPPER MIDDLE
+|(Fist, Center)|(Palm, Center)|MOVED TO UPPER RIGHT
+|(Fist, Center)|(Palm, Center)|MOVED TO LEFT
+|(Fist, Center)|(Palm, Center)|MOVED TO RIGHT
+|(Fist, Center)|(Palm, Center)|MOVED TO LOWER LEFT
+|(Fist, Center)|(Palm, Center)|MOVED TO LOWER MIDDLE
+|(Fist, Center)|(Palm, Center)|MOVED TO LOWER RIGHT
+|Anything else|Anything else|UNKNOWN
 
 (Palm, Center) to (Fist, Center) is chosen as the sequence for select because it is natural for the user to want to close their fist in order to grab an item on the screen and to open their fist in the center if they would like to cancel the operation. After selecting, all other operations must start with the fist in the center followed by an open palm anywhere else. This allows the user to feel as if they are physically grabbing an item in the center of the screen and then releasing it somewhere on the screen. Since the system is only active after the user has selected an item in the center of the screen, this allows the user to be able to relax and remain in  a resting position if they are not engaging with the program in a live situation. By default, humans keep their hands in a half closed position, which means that program is likely to only accept sequences that the user is actually trying to convey. The center of screen is chosen because the user’s hands will spend most its time around the lower ends of the canvas, therefore we avoid the problem of having a “midas hand” and prevent accidental uses of program.
 
