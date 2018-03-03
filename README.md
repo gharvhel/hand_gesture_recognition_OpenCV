@@ -1,5 +1,535 @@
-# hand_gesture_recognition_OpenCV
-A program which will take as its input a sequence of images of either a fist or a palm and then produce from such sequence an instruction to the computer. 
-The process involves capturing at least two different images with clear backgrounds and then inputting them into the software. The software will then proceed to do a few image editing procedures to pick out the skin color from the images, which is then captured and contoured. Once we obtain a contour, we can then find defects as well as the center of mass hand, which allows the program to determine the “what and where” of the hand respectively. 
-After that, the program is able to check whether or not the combination of the “what and where” for the two pictures is part of a specified grammar; if it is, an instruction is logged to the console.  
-Check Visual_Interfaces_project1.pdf for mor details.
+ol{margin:0;padding:0}table td,table th{padding:0}.c14{border-right-style:solid;padding:5pt 5pt 5pt 5pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;width:156pt;border-top-color:#000000;border-bottom-style:solid}.c23{border-right-style:solid;padding:5pt 5pt 5pt 5pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;width:334.5pt;border-top-color:#000000;border-bottom-style:solid}.c21{border-right-style:solid;padding:5pt 5pt 5pt 5pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;width:135pt;border-top-color:#000000;border-bottom-style:solid}.c26{border-right-style:solid;padding:5pt 5pt 5pt 5pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;width:234pt;border-top-color:#000000;border-bottom-style:solid}.c19{border-right-style:solid;padding:5pt 5pt 5pt 5pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;width:234pt;border-top-color:#000000;border-bottom-style:solid}.c18{border-right-style:solid;padding:5pt 5pt 5pt 5pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;width:133.5pt;border-top-color:#000000;border-bottom-style:solid}.c20{border-right-style:solid;padding:5pt 5pt 5pt 5pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;width:333pt;border-top-color:#000000;border-bottom-style:solid}.c17{-webkit-text-decoration-skip:none;color:#000000;font-weight:400;text-decoration:underline;vertical-align:baseline;text-decoration-skip-ink:none;font-size:12pt;font-family:"Arial";font-style:normal}.c5{color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:12pt;font-family:"Arial";font-style:normal}.c6{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-family:"Arial";font-style:normal}.c10{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:10.5pt;font-family:"Verdana";font-style:normal}.c8{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Arial";font-style:normal}.c3{padding-top:0pt;padding-bottom:0pt;line-height:1.15;orphans:2;widows:2;text-align:left}.c2{padding-top:0pt;padding-bottom:0pt;line-height:1.0;text-align:left;height:11pt}.c11{border-spacing:0;border-collapse:collapse;margin-right:auto}.c4{font-size:10.5pt;font-family:"Verdana";color:#09885a;font-weight:400}.c1{font-size:10.5pt;font-family:"Verdana";color:#0000ff;font-weight:400}.c25{padding-top:0pt;padding-bottom:0pt;line-height:1.15;text-align:right}.c12{padding-top:0pt;padding-bottom:0pt;line-height:1.3571428571428572;text-align:left}.c13{font-size:10.5pt;font-family:"Verdana";color:#a31515;font-weight:400}.c7{padding-top:0pt;padding-bottom:0pt;line-height:1.0;text-align:left}.c28{padding-top:0pt;padding-bottom:0pt;line-height:1.15;text-align:center}.c29{background-color:#ffffff;max-width:468pt;padding:72pt 72pt 72pt 72pt}.c22{text-decoration:none;vertical-align:baseline;font-style:normal}.c16{font-size:10.5pt;font-family:"Verdana";font-weight:400}.c15{orphans:2;widows:2}.c24{font-size:12pt}.c0{height:0pt}.c27{font-weight:700}.c9{height:11pt}.title{padding-top:0pt;color:#000000;font-size:26pt;padding-bottom:3pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}.subtitle{padding-top:0pt;color:#666666;font-size:15pt;padding-bottom:16pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}li{color:#000000;font-size:11pt;font-family:"Arial"}p{margin:0;color:#000000;font-size:11pt;font-family:"Arial"}h1{padding-top:20pt;color:#000000;font-size:20pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h2{padding-top:18pt;color:#000000;font-size:16pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h3{padding-top:16pt;color:#434343;font-size:14pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h4{padding-top:14pt;color:#666666;font-size:12pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h5{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h6{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;font-style:italic;orphans:2;widows:2;text-align:left}
+
+Gharvhel Carre
+
+gc2767
+
+Project I
+
+INTRODUCTION
+
+I wish to create a program which will take as its input a sequence of images of either a fist or a palm and then produce from such sequence an instruction to the computer. The process involves capturing at least two different images with clear backgrounds and then inputting them into the software. The software will then proceed to do a few image editing procedures to pick out the skin color from the images, which is then captured and contoured. Once we obtain a contour, we can then find defects as well as the center of mass hand, which allows the program to determine the “what and where” of the hand respectively. After that, the program is able to check whether or not the combination of the “what and where” for the two pictures is part of a specified grammar; if it is, an instruction is logged to the console.
+
+DOMAIN ENGINEERING
+
+The first step of this process is to obtain a sequence of images. ![asd](images/image22.jpg)
+
+The images are best taken against any solid background color in order to prevent noise and confusion.
+
+To improve results even further, I recommend taking the pictures against a green background as well as wearing green sleeves such as the picture on the right.
+
+The color green is chosen as it is not similar to any natural skin tone or hair color, therefore it will be easier to pick out the skin tones in later image processing.
+
+In this project, the 34 images are taken from a top-down view with non-direct lighting coming directly from the top in order prevent shadows from causing noise and confusion. 21 of the images are taken using a Samsung Galaxy s7 Edge at the lowest resolution of 2160x2160 pixels. The pictures are then saved as a compressed jpeg file and then transferred to Google Drive at which point they are further compressed to the resolution of 1600x1600 pixels to maximize processing speed. The other 13 images were taken at the high resolution of 4032x3024 pixel and saved as jpeg files for experimental purposes. The images were intended to capture the user with grabbing and moving items from the center of the screen to areas around the screen.
+
+The naming convention for the images goes as follows:
+
+        The image can start with “f”, “p”, or “r” for fist, palm, or random respectively and end with a number denoting what quadrant of the screen (up to 9 quadrants) an image is meant to be in, unless the image starts with “r”, then the number after it is only there to uniquely identify it.
+
+In order to further maximize image processing speed, the software was built using the latest version of OpenCV (3.4.0), and written in the low level language of C++ on a lightweight Linux operating system.
+
+DATA REDUCTION STEP
+
+In order to determine the “what and where” of the images, the images are manipulated in various ways to obtain a binary threshold of the skin color.
+
+First and foremost, the image is converted from the Red Green Blue color space to the Hue, Value, Saturation color space.
+
+![](images/image2.png)
+
+![](images/image41.png)         →        ![](images/image31.png)
+
+                Original                                                      HSV
+
+Secondly, an image mask is picked out using a threshold range of skin color.
+
+In order to find the best possible combination for the range, a second program named “calibration” is used which allows the user to use trackbars to update the range in real time. Once a desired combination is found, the values can then be hard coded in the hand\_gesture\_regognition program. ![](images/image12.png)
+
+![](images/image25.png)
+
+![](images/image45.png)
+
+ ![](images/image31.png)     →        ![](images/image14.png)
+
+                HSV                                                      Threshold
+
+The next few steps were done in order to reduce noise as well as refine the edges of the mask.
+
+![](images/image28.png)
+
+![](images/image6.png)
+
+![](images/image38.png)
+
+![](images/image14.png)→ ![](images/image19.png)
+
+                 Threshold                                        Eroded
+
+![](images/image21.png)→ ![](images/image11.png)
+
+                Dilated                                        Blurred
+
+At this point, the image is a good binary image of the hand (fist or palm).
+
+The next step is to find all of the contours in the image and pick out the largest contour which is the hand in its entirety.
+
+![](images/image7.png)
+
+![](images/image10.png)
+
+From this, we obtain the following
+
+With the contour obtain, the next step is to calculate the convex hull. (See code)
+
+![](images/image39.png)
+
+![](images/image30.png)
+
+![](images/image33.png)
+
+The convex hull is very useful as the finger tips tend to be at the corners of the hull.
+
+The first corner tends to be wrong, so I deliberately skip it.
+
+![](images/image17.png)
+
+Using the contour and the convex hull. We can detect the defects, which are essentially valleys, or dips between the corners of the hull and the contour.
+
+After obtaining these triangular dips, we can pick out the fingers by only accounting for dips which are within a specified angle range; In this case, we only account for defects that are greater than 11500 units.
+
+At this point, with some degree of precision, we are able to determine how many fingers are present. Unfortunately, this method is not perfect, for instance it may detect one finger for a fist, therefore if we count one finger or less, we can assume that the image is a fist, otherwise we assume that it is a palm. This adjustment makes the program very accurate at distinguishing between a palm and a fist.
+
+![](images/image9.png)
+
+Now that we have the “what” of the image, the next step is to obtain the “where”.
+
+This is achieved by finding the center of area of the largest contour using moments and then comparing it to its relative position on the image canvas.
+
+![](images/image42.png)
+
+![](images/image16.png)
+
+In order to be able to make the comparison we must first define areas on the canvas.
+
+I’ve decided to split the image into 9 quadrants in the following way:
+
+![](images/image43.png)
+
+This is achieved by individually dividing the width and height by three to obtain the size of a quadrant.
+
+With defined regions, the “where” is then determined by checking the center of area with the regions above.
+
+int get_quadrant(int&center_x, int&center_y, Mat &image, int&where, char *what\_and\_where)
+
+{
+
+ inty_quadrant = image.size().height / 3;
+
+ intx_quadrant = image.size().width / 3;
+
+ int quadrant;
+
+ if ((center\_y <= y\_quadrant) && (center\_x <= x\_quadrant))
+
+    {
+
+strcat(what\_and\_where, "UPPER LEFT)");
+
+quadrant = 1;
+
+    }
+
+ elseif((center_y <= 2 \* y\_quadrant) && (center\_x <= x_quadrant))
+
+    {
+
+strcat(what\_and\_where, "MIDDLE LEFT)");
+
+quadrant = 4;
+
+    }
+
+ elseif((center_y <= 3 \* y\_quadrant) && (center\_x <= x_quadrant))
+
+    {
+
+strcat(what\_and\_where, "LOWER LEFT)");
+
+quadrant = 7;
+
+    }
+
+ elseif((center\_y <= y\_quadrant) && (center_x <= 2 \* x_quadrant))
+
+    {
+
+strcat(what\_and\_where, "UPPER MIDDLE)");
+
+quadrant = 2;
+
+    }
+
+ elseif((center_y <= 2\* y\_quadrant) && (center\_x <= 2 \* x_quadrant))
+
+    {
+
+strcat(what\_and\_where, "CENTER)");
+
+quadrant = 5;
+
+    }
+
+ elseif((center_y <= 3\* y\_quadrant) && (center\_x <= 2 \* x_quadrant))
+
+    {
+
+strcat(what\_and\_where, "LOWER MIDDLE)");
+
+quadrant = 8;
+
+    }
+
+ elseif((center\_y <= y\_quadrant) && (center_x <= 3 \* x_quadrant))
+
+    {
+
+strcat(what\_and\_where, "UPPER RIGHT)");
+
+quadrant = 3;
+
+    }
+
+ elseif((center_y <= 2\* y\_quadrant) && (center\_x <= 3 \* x_quadrant))
+
+    {
+
+strcat(what\_and\_where, "MIDDLE RIGHT)");
+
+quadrant = 6;
+
+    }
+
+ elseif((center_y <= 3\* y\_quadrant) && (center\_x <= 3 \* x_quadrant))
+
+    {
+
+strcat(what\_and\_where, "LOWER RIGHT)");
+
+quadrant = 9;
+
+    }
+
+    where = quadrant;
+
+ return quadrant;
+
+}
+
+PARSING & PERFORMANCE
+
+The program takes in two images, and determines if the meaning of the sequence is valid. If it is, an instruction is sent to the computer. The grammar or accepted sequences are as follows:
+
+Frame1
+
+Frame2
+
+Result
+
+(Palm, Center)
+
+(Fist, Center)
+
+SELECTED
+
+(Fist, Center)
+
+(Palm, Center)
+
+CANCELLED
+
+(Fist, Center)
+
+(Palm, Center)
+
+MOVED TO UPPER LEFT
+
+(Fist, Center)
+
+(Palm, Center)
+
+MOVED TO UPPER MIDDLE
+
+(Fist, Center)
+
+(Palm, Center)
+
+MOVED TO UPPER RIGHT
+
+(Fist, Center)
+
+(Palm, Center)
+
+MOVED TO LEFT
+
+(Fist, Center)
+
+(Palm, Center)
+
+MOVED TO RIGHT
+
+(Fist, Center)
+
+(Palm, Center)
+
+MOVED TO LOWER LEFT
+
+(Fist, Center)
+
+(Palm, Center)
+
+MOVED TO LOWER MIDDLE
+
+(Fist, Center)
+
+(Palm, Center)
+
+MOVED TO LOWER RIGHT
+
+Anything else
+
+Anything else
+
+UNKNOWN
+
+(Palm, Center) to (Fist, Center) is chosen as the sequence for select because it is natural for the user to want to close their fist in order to grab an item on the screen and to open their fist in the center if they would like to cancel the operation. After selecting, all other operations must start with the fist in the center followed by an open palm anywhere else. This allows the user to feel as if they are physically grabbing an item in the center of the screen and then releasing it somewhere on the screen. Since the system is only active after the user has selected an item in the center of the screen, this allows the user to be able to relax and remain in  a resting position if they are not engaging with the program in a live situation. By default, humans keep their hands in a half closed position, which means that program is likely to only accept sequences that the user is actually trying to convey. The center of screen is chosen because the user’s hands will spend most its time around the lower ends of the canvas, therefore we avoid the problem of having a “midas hand” and prevent accidental uses of program.
+
+if (what1 == PALM && what2 == FIST)
+
+    {
+
+ if(where1 == 5&& where2 == 5)
+
+cout << "SELECTED\\n";
+
+ else
+
+cout << "UNKNOWN\\n";
+
+    }
+
+ elseif (what1 == FIST && what2 == PALM)
+
+    {
+
+ if(where1 != 5)
+
+        {
+
+cout << "UNKNOWN\\n";
+
+        }
+
+ elseif(where2 == 1)
+
+        {
+
+cout << "MOVED TO UPPER LEFT\\n";
+
+        }
+
+ elseif(where2 == 2)
+
+        {
+
+cout << "MOVED TO UPPER MIDDLE\\n";
+
+        }
+
+ elseif(where2 == 3)
+
+        {
+
+cout << "MOVED TO UPPER RIGHT\\n";
+
+        }
+
+ elseif(where2 == 4)
+
+        {
+
+cout << "MOVED TO LEFT\\n";
+
+        }
+
+ elseif(where2 == 5)
+
+        {
+
+cout << "CANCELLED\\n";
+
+        }
+
+ elseif(where2 == 6)
+
+        {
+
+cout << "MOVED TO RIGHT\\n";
+
+        }
+
+ elseif(where2 == 7)
+
+        {
+
+cout << "MOVED TO LOWER LEFT\\n";
+
+        }
+
+ elseif(where2 == 8)
+
+        {
+
+cout << "MOVED TO LOWER MIDDLE\\n";
+
+        }
+
+ elseif(where2 == 9)
+
+        {
+
+cout << "MOVED TO LOWER RIGHT\\n";
+
+        }
+
+    }
+
+ else
+
+cout << "UNKNOWN\\n";
+
+Successful Runs
+
+What & Where
+
+Program Output
+
+![](images/image40.png)
+
+SELECTED
+
+![](images/image3.png)
+
+CANCELLED
+
+![](images/image15.png)
+
+MOVED TO UPPER LEFT
+
+![](images/image27.png)
+
+MOVED TO LEFT
+
+![](images/image32.png)
+
+MOVED TO RIGHT
+
+![](images/image35.png)
+
+MOVED TO LOWER MIDDLE
+
+![](images/image34.png)
+
+MOVED TO LOWER RIGHT
+
+![](images/image36.png)
+
+UNKNOWN
+
+False Positive
+
+What & Where
+
+Program Output
+
+![](images/image1.png)
+
+SELECTED
+
+![](images/image18.png)
+
+SELECTED
+
+The previous two examples outputted SELECTED even though they should have been UNKNOWN. The error in the first sequence occurred because the first image was lit from the side, hence confusing the program and messing up the contour. The chosen pictures also have a really large resolution of 4032x3024 pixel which made the program think that the defects are fingers, five of them to be exact. Using lower resolution images and better lighting would fix this issue in my opinion.
+
+The second sequence is incorrect, because the user used the “thumbs-up” gesture, which is not part of the grammar, however, the program picked it up as a palm. This is because the program computed two fingers and assumed that it is a palm. This issue could be fixed that making 5 fingers the only accepted definition for a palm. This is also a human error and could have been fixed by following the grammar.
+
+False Negatives
+
+What & Where
+
+Program Output
+
+![](images/image23.png)
+
+UNKNOWN
+
+![](images/image8.png)
+
+UNKNOWN
+
+The previous examples should have outputted MOVED TO UPPER MIDDLE and MOVED TO UPPER RIGHT respectively, however the program assumed that they both failed because because the user moved his hand way to far up and ended up moving his fingers out of the frame, making it difficult for the program to compute the convex hull. Therefore, to fix this issue, the entire hand should be captured in all images.
+
+ENHANCEMENTS
+
+To further improve and enhance the system, I have chosen to make the system real time.
+
+This was done by opening the camera and doing a cycle of 4 frames.
+
+![](images/image24.png)
+
+At frame1, the first image in the sequence is processed, at frame2 the system waits a 1000 millisecond which not only allows the user to switch his/her pose, but also allows for slower systems to process the images. At frame3, the second image of the sequence is processed, then the grammar is evaluated. Lastly, at frame4, the system waits another 1000 milliseconds to allow the user to switch his/her pose.
+
+LIVE MODE EXAMPLES
+
+Action: CANCELLED
+
+![](images/image46.png)
+
+Action: SELECTED![](images/image29.png)
+
+Action: UNKNOWN
+
+![](images/image37.png)
+
+Action: CANCELED
+
+![](images/image13.png)
+
+Action: SELECTED
+
+![](images/image5.png)
+
+Action: CANCELLED
+
+![](images/image49.png)
+
+Action: UNKNOWN
+
+![](images/image26.png)
+
+Action: UNKNOWN
+
+![](images/image20.png)
+
+FALSE POSITIVES
+
+![](images/image48.png)![](images/image4.png)![](images/image47.png)
+
+FALSE NEGATIVES
+
+![](images/image44.png)![](images/image20.png)
+
+The live version the the program works, however it was hard to find a sweet spot with the amount of time between each frame. If the time is to fast then the user does not have the time to change gestures, and if it is too slow then the system feels slow and bulky. Due to these difficulties if was hard to be able to display all of the systems grammar in the live version. Lighting proved to be an issue as well. When dealing with the video frames, it was harder to get the light to fall in such a way so that shadows and reflections would not interfere with the image processing.
+
+To reduce these issues, I could have used a tripod to stabilize the camera, as well as used a large still background, preferably green.  Lastly, I could have also worn a long green sleeved t-shirt and covered my face to not confuse the program.
+
+Source code and pictures are attached.
