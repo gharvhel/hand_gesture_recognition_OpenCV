@@ -245,4 +245,4 @@ The live version the the program works, however it was hard to find a sweet spot
 
 To reduce these issues, I could have used a tripod to stabilize the camera, as well as used a large still background, preferably green.  Lastly, I could have also worn a long green sleeved t-shirt and covered my face to not confuse the program.
 
-Pictures used are attached.
+Pictures used are in pictures folder.
