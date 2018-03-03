@@ -8,7 +8,7 @@ The first step of this process is to obtain a sequence of images. ![asd](images/
 
 The images are best taken against any solid background color in order to prevent noise and confusion.
 
-To improve results even further, I recommend taking the pictures against a green background as well as wearing green sleeves such as the picture on the right.
+To improve results even further, I recommend taking the pictures against a green background as well as wearing green sleeves such as the picture above.
 
 The color green is chosen as it is not similar to any natural skin tone or hair color, therefore it will be easier to pick out the skin tones in later image processing.
 
@@ -110,116 +110,14 @@ This is achieved by individually dividing the width and height by three to obtai
 
 With defined regions, the “where” is then determined by checking the center of area with the regions above.
 
-int get_quadrant(int&center_x, int&center_y, Mat &image, int&where, char *what\_and\_where)
-
-{
-
- inty_quadrant = image.size().height / 3;
-
- intx_quadrant = image.size().width / 3;
-
- int quadrant;
-
- if ((center\_y <= y\_quadrant) && (center\_x <= x\_quadrant))
-
-    {
-
-strcat(what\_and\_where, "UPPER LEFT)");
-
-quadrant = 1;
-
-    }
-
- elseif((center_y <= 2 \* y\_quadrant) && (center\_x <= x_quadrant))
-
-    {
-
-strcat(what\_and\_where, "MIDDLE LEFT)");
-
-quadrant = 4;
-
-    }
-
- elseif((center_y <= 3 \* y\_quadrant) && (center\_x <= x_quadrant))
-
-    {
-
-strcat(what\_and\_where, "LOWER LEFT)");
-
-quadrant = 7;
-
-    }
-
- elseif((center\_y <= y\_quadrant) && (center_x <= 2 \* x_quadrant))
-
-    {
-
-strcat(what\_and\_where, "UPPER MIDDLE)");
-
-quadrant = 2;
-
-    }
-
- elseif((center_y <= 2\* y\_quadrant) && (center\_x <= 2 \* x_quadrant))
-
-    {
-
-strcat(what\_and\_where, "CENTER)");
-
-quadrant = 5;
-
-    }
-
- elseif((center_y <= 3\* y\_quadrant) && (center\_x <= 2 \* x_quadrant))
-
-    {
-
-strcat(what\_and\_where, "LOWER MIDDLE)");
-
-quadrant = 8;
-
-    }
-
- elseif((center\_y <= y\_quadrant) && (center_x <= 3 \* x_quadrant))
-
-    {
-
-strcat(what\_and\_where, "UPPER RIGHT)");
-
-quadrant = 3;
-
-    }
-
- elseif((center_y <= 2\* y\_quadrant) && (center\_x <= 3 \* x_quadrant))
-
-    {
-
-strcat(what\_and\_where, "MIDDLE RIGHT)");
-
-quadrant = 6;
-
-    }
-
- elseif((center_y <= 3\* y\_quadrant) && (center\_x <= 3 \* x_quadrant))
-
-    {
-
-strcat(what\_and\_where, "LOWER RIGHT)");
-
-quadrant = 9;
-
-    }
-
-    where = quadrant;
-
- return quadrant;
-
-}
 
 PARSING & PERFORMANCE
 
 The program takes in two images, and determines if the meaning of the sequence is valid. If it is, an instruction is sent to the computer. The grammar or accepted sequences are as follows:
 
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
 Frame1
 
 Frame2
