@@ -115,20 +115,16 @@ PARSING & PERFORMANCE
 
 The program takes in two images, and determines if the meaning of the sequence is valid. If it is, an instruction is sent to the computer. The grammar or accepted sequences are as follows:
 
-| Tables        | Are           | Cool  |
+| **Frame1**        | **Frame2**        | **Result**  |
 | ------------- |:-------------:| -----:|
 | col 3 is      | right-aligned | $1600 |
-Frame1
 
-Frame2
 
-Result
+|(Palm, Center)|
 
-(Palm, Center)
+|(Fist, Center)|
 
-(Fist, Center)
-
-SELECTED
+|SELECTED|
 
 (Fist, Center)
 
