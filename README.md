@@ -1,8 +1,8 @@
-**HAND GESTURE RECOGNITION
+**HAND GESTURE RECOGNITION**
 
 A program which will take as its input a sequence of images of either a fist or a palm and then produce from such sequence an instruction to the computer. The process involves capturing at least two different images with clear backgrounds and then inputting them into the software. The software will then proceed to do a few image editing procedures to pick out the skin color from the images, which is then captured and contoured. Once we obtain a contour, we can then find defects as well as the center of mass hand, which allows the program to determine the “what and where” of the hand respectively. After that, the program is able to check whether or not the combination of the “what and where” for the two pictures is part of a specified grammar; if it is, an instruction is logged to the console.
 
-**DOMAIN ENGINEERING
+**DOMAIN ENGINEERING**
 
 The first step of this process is to obtain a sequence of images. ![asd](images/image22.jpg)
 
@@ -20,7 +20,7 @@ The image can start with “f”, “p”, or “r” for fist, palm, or random 
 
 In order to further maximize image processing speed, the software was built using the latest version of OpenCV (3.4.0), and written in the low level language of C++ on a lightweight Linux operating system.
 
-**DATA REDUCTION STEP
+**DATA REDUCTION STEP**
 
 In order to determine the “what and where” of the images, the images are manipulated in various ways to obtain a binary threshold of the skin color.
 
@@ -111,7 +111,7 @@ This is achieved by individually dividing the width and height by three to obtai
 With defined regions, the “where” is then determined by checking the center of area with the regions above.
 
 
-**PARSING & PERFORMANCE
+**PARSING & PERFORMANCE**
 
 The program takes in two images, and determines if the meaning of the sequence is valid. If it is, an instruction is sent to the computer. The grammar or accepted sequences are as follows:
 
@@ -131,7 +131,7 @@ The program takes in two images, and determines if the meaning of the sequence i
 
 (Palm, Center) to (Fist, Center) is chosen as the sequence for select because it is natural for the user to want to close their fist in order to grab an item on the screen and to open their fist in the center if they would like to cancel the operation. After selecting, all other operations must start with the fist in the center followed by an open palm anywhere else. This allows the user to feel as if they are physically grabbing an item in the center of the screen and then releasing it somewhere on the screen. Since the system is only active after the user has selected an item in the center of the screen, this allows the user to be able to relax and remain in  a resting position if they are not engaging with the program in a live situation. By default, humans keep their hands in a half closed position, which means that program is likely to only accept sequences that the user is actually trying to convey. The center of screen is chosen because the user’s hands will spend most its time around the lower ends of the canvas, therefore we avoid the problem of having a “midas hand” and prevent accidental uses of program.
 
-**Successful Runs
+**Successful Runs**
 
 ![](images/image40.png)
 
@@ -165,7 +165,7 @@ Program Output: MOVED TO LOWER RIGHT
 
 Program Output: UNKNOWN
 
-**False Positive
+**False Positive**
 
 ![](images/image1.png)
 
@@ -179,7 +179,7 @@ The previous two examples outputted SELECTED even though they should have been U
 
 The second sequence is incorrect, because the user used the “thumbs-up” gesture, which is not part of the grammar, however, the program picked it up as a palm. This is because the program computed two fingers and assumed that it is a palm. This issue could be fixed that making 5 fingers the only accepted definition for a palm. This is also a human error and could have been fixed by following the grammar.
 
-**False Negatives
+**False Negatives**
 
 ![](images/image23.png)
 
@@ -191,7 +191,7 @@ Program Output: UNKNOWN
 
 The previous examples should have outputted MOVED TO UPPER MIDDLE and MOVED TO UPPER RIGHT respectively, however the program assumed that they both failed because because the user moved his hand way to far up and ended up moving his fingers out of the frame, making it difficult for the program to compute the convex hull. Therefore, to fix this issue, the entire hand should be captured in all images.
 
-**ENHANCEMENTS
+**ENHANCEMENTS**
 
 To further improve and enhance the system, I have chosen to make the system real time.
 
@@ -201,7 +201,7 @@ This was done by opening the camera and doing a cycle of 4 frames.
 
 At frame1, the first image in the sequence is processed, at frame2 the system waits a 1000 millisecond which not only allows the user to switch his/her pose, but also allows for slower systems to process the images. At frame3, the second image of the sequence is processed, then the grammar is evaluated. Lastly, at frame4, the system waits another 1000 milliseconds to allow the user to switch his/her pose.
 
-**LIVE MODE EXAMPLES
+**LIVE MODE EXAMPLES**
 
 Action: CANCELLED
 
@@ -233,11 +233,11 @@ Action: UNKNOWN
 
 ![](images/image20.png)
 
-**FALSE POSITIVES
+**FALSE POSITIVES**
 
 ![](images/image48.png)![](images/image4.png)![](images/image47.png)
 
-**FALSE NEGATIVES
+**FALSE NEGATIVES**
 
 ![](images/image44.png)![](images/image20.png)
 
