@@ -1,12 +1,4 @@
-ol{margin:0;padding:0}table td,table th{padding:0}.c14{border-right-style:solid;padding:5pt 5pt 5pt 5pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;width:156pt;border-top-color:#000000;border-bottom-style:solid}.c23{border-right-style:solid;padding:5pt 5pt 5pt 5pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;width:334.5pt;border-top-color:#000000;border-bottom-style:solid}.c21{border-right-style:solid;padding:5pt 5pt 5pt 5pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;width:135pt;border-top-color:#000000;border-bottom-style:solid}.c26{border-right-style:solid;padding:5pt 5pt 5pt 5pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:0pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;width:234pt;border-top-color:#000000;border-bottom-style:solid}.c19{border-right-style:solid;padding:5pt 5pt 5pt 5pt;border-bottom-color:#000000;border-top-width:0pt;border-right-width:0pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:0pt;width:234pt;border-top-color:#000000;border-bottom-style:solid}.c18{border-right-style:solid;padding:5pt 5pt 5pt 5pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;width:133.5pt;border-top-color:#000000;border-bottom-style:solid}.c20{border-right-style:solid;padding:5pt 5pt 5pt 5pt;border-bottom-color:#000000;border-top-width:1pt;border-right-width:1pt;border-left-color:#000000;vertical-align:top;border-right-color:#000000;border-left-width:1pt;border-top-style:solid;border-left-style:solid;border-bottom-width:1pt;width:333pt;border-top-color:#000000;border-bottom-style:solid}.c17{-webkit-text-decoration-skip:none;color:#000000;font-weight:400;text-decoration:underline;vertical-align:baseline;text-decoration-skip-ink:none;font-size:12pt;font-family:"Arial";font-style:normal}.c5{color:#000000;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:12pt;font-family:"Arial";font-style:normal}.c6{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-family:"Arial";font-style:normal}.c10{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:10.5pt;font-family:"Verdana";font-style:normal}.c8{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Arial";font-style:normal}.c3{padding-top:0pt;padding-bottom:0pt;line-height:1.15;orphans:2;widows:2;text-align:left}.c2{padding-top:0pt;padding-bottom:0pt;line-height:1.0;text-align:left;height:11pt}.c11{border-spacing:0;border-collapse:collapse;margin-right:auto}.c4{font-size:10.5pt;font-family:"Verdana";color:#09885a;font-weight:400}.c1{font-size:10.5pt;font-family:"Verdana";color:#0000ff;font-weight:400}.c25{padding-top:0pt;padding-bottom:0pt;line-height:1.15;text-align:right}.c12{padding-top:0pt;padding-bottom:0pt;line-height:1.3571428571428572;text-align:left}.c13{font-size:10.5pt;font-family:"Verdana";color:#a31515;font-weight:400}.c7{padding-top:0pt;padding-bottom:0pt;line-height:1.0;text-align:left}.c28{padding-top:0pt;padding-bottom:0pt;line-height:1.15;text-align:center}.c29{background-color:#ffffff;max-width:468pt;padding:72pt 72pt 72pt 72pt}.c22{text-decoration:none;vertical-align:baseline;font-style:normal}.c16{font-size:10.5pt;font-family:"Verdana";font-weight:400}.c15{orphans:2;widows:2}.c24{font-size:12pt}.c0{height:0pt}.c27{font-weight:700}.c9{height:11pt}.title{padding-top:0pt;color:#000000;font-size:26pt;padding-bottom:3pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}.subtitle{padding-top:0pt;color:#666666;font-size:15pt;padding-bottom:16pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}li{color:#000000;font-size:11pt;font-family:"Arial"}p{margin:0;color:#000000;font-size:11pt;font-family:"Arial"}h1{padding-top:20pt;color:#000000;font-size:20pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h2{padding-top:18pt;color:#000000;font-size:16pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h3{padding-top:16pt;color:#434343;font-size:14pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h4{padding-top:14pt;color:#666666;font-size:12pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h5{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h6{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;font-style:italic;orphans:2;widows:2;text-align:left}
-
-Gharvhel Carre
-
-gc2767
-
-Project I
-
-INTRODUCTION
+HAND GESTURE RECOGNITION
 
 I wish to create a program which will take as its input a sequence of images of either a fist or a palm and then produce from such sequence an instruction to the computer. The process involves capturing at least two different images with clear backgrounds and then inputting them into the software. The software will then proceed to do a few image editing procedures to pick out the skin color from the images, which is then captured and contoured. Once we obtain a contour, we can then find defects as well as the center of mass hand, which allows the program to determine the “what and where” of the hand respectively. After that, the program is able to check whether or not the combination of the “what and where” for the two pictures is part of a specified grammar; if it is, an instruction is logged to the console.
 
@@ -24,7 +16,7 @@ In this project, the 34 images are taken from a top-down view with non-direct li
 
 The naming convention for the images goes as follows:
 
-        The image can start with “f”, “p”, or “r” for fist, palm, or random respectively and end with a number denoting what quadrant of the screen (up to 9 quadrants) an image is meant to be in, unless the image starts with “r”, then the number after it is only there to uniquely identify it.
+The image can start with “f”, “p”, or “r” for fist, palm, or random respectively and end with a number denoting what quadrant of the screen (up to 9 quadrants) an image is meant to be in, unless the image starts with “r”, then the number after it is only there to uniquely identify it.
 
 In order to further maximize image processing speed, the software was built using the latest version of OpenCV (3.4.0), and written in the low level language of C++ on a lightweight Linux operating system.
 
@@ -38,7 +30,7 @@ First and foremost, the image is converted from the Red Green Blue color space t
 
 ![](images/image41.png)         →        ![](images/image31.png)
 
-                Original                                                      HSV
+                Original                     HSV
 
 Secondly, an image mask is picked out using a threshold range of skin color.
 
@@ -50,7 +42,7 @@ In order to find the best possible combination for the range, a second program n
 
  ![](images/image31.png)     →        ![](images/image14.png)
 
-                HSV                                                      Threshold
+                HSV                           Threshold
 
 The next few steps were done in order to reduce noise as well as refine the edges of the mask.
 
@@ -62,11 +54,11 @@ The next few steps were done in order to reduce noise as well as refine the edge
 
 ![](images/image14.png)→ ![](images/image19.png)
 
-                 Threshold                                        Eroded
+                 Threshold                    Eroded
 
 ![](images/image21.png)→ ![](images/image11.png)
 
-                Dilated                                        Blurred
+                Dilated                      Blurred
 
 At this point, the image is a good binary image of the hand (fist or palm).
 
@@ -408,55 +400,47 @@ cout << "UNKNOWN\\n";
 
 Successful Runs
 
-What & Where
-
-Program Output
-
 ![](images/image40.png)
 
-SELECTED
+Program Output: SELECTED
 
 ![](images/image3.png)
 
-CANCELLED
+Program Output: CANCELLED
 
 ![](images/image15.png)
 
-MOVED TO UPPER LEFT
+Program Output: MOVED TO UPPER LEFT
 
 ![](images/image27.png)
 
-MOVED TO LEFT
+Program Output: MOVED TO LEFT
 
 ![](images/image32.png)
 
-MOVED TO RIGHT
+Program Output: MOVED TO RIGHT
 
 ![](images/image35.png)
 
-MOVED TO LOWER MIDDLE
+Program Output: MOVED TO LOWER MIDDLE
 
 ![](images/image34.png)
 
-MOVED TO LOWER RIGHT
+Program Output: MOVED TO LOWER RIGHT
 
 ![](images/image36.png)
 
-UNKNOWN
+Program Output: UNKNOWN
 
 False Positive
 
-What & Where
-
-Program Output
-
 ![](images/image1.png)
 
-SELECTED
+Program Output: SELECTED
 
 ![](images/image18.png)
 
-SELECTED
+Program Output: SELECTED
 
 The previous two examples outputted SELECTED even though they should have been UNKNOWN. The error in the first sequence occurred because the first image was lit from the side, hence confusing the program and messing up the contour. The chosen pictures also have a really large resolution of 4032x3024 pixel which made the program think that the defects are fingers, five of them to be exact. Using lower resolution images and better lighting would fix this issue in my opinion.
 
@@ -464,17 +448,13 @@ The second sequence is incorrect, because the user used the “thumbs-up” gest
 
 False Negatives
 
-What & Where
-
-Program Output
-
 ![](images/image23.png)
 
-UNKNOWN
+Program Output: UNKNOWN
 
 ![](images/image8.png)
 
-UNKNOWN
+Program Output: UNKNOWN
 
 The previous examples should have outputted MOVED TO UPPER MIDDLE and MOVED TO UPPER RIGHT respectively, however the program assumed that they both failed because because the user moved his hand way to far up and ended up moving his fingers out of the frame, making it difficult for the program to compute the convex hull. Therefore, to fix this issue, the entire hand should be captured in all images.
 
@@ -532,4 +512,4 @@ The live version the the program works, however it was hard to find a sweet spot
 
 To reduce these issues, I could have used a tripod to stabilize the camera, as well as used a large still background, preferably green.  Lastly, I could have also worn a long green sleeved t-shirt and covered my face to not confuse the program.
 
-Source code and pictures are attached.
+Pictures used are attached.
