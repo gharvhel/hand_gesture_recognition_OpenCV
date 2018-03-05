@@ -1,8 +1,8 @@
-**HAND GESTURE RECOGNITION**
+# HAND GESTURE RECOGNITION
 
 A program which will take as its input a sequence of images of either a fist or a palm and then produce from such sequence an instruction to the computer. The process involves capturing at least two different images with clear backgrounds and then inputting them into the software. The software will then proceed to do a few image editing procedures to pick out the skin color from the images, which is then captured and contoured. Once we obtain a contour, we can then find defects as well as the center of mass hand, which allows the program to determine the “what and where” of the hand respectively. After that, the program is able to check whether or not the combination of the “what and where” for the two pictures is part of a specified grammar; if it is, an instruction is logged to the console.
 
-**DOMAIN ENGINEERING**
+## DOMAIN ENGINEERING
 
 The first step of this process is to obtain a sequence of images. ![asd](images/image22.jpg)
 
@@ -20,7 +20,7 @@ The image can start with “f”, “p”, or “r” for fist, palm, or random 
 
 In order to further maximize image processing speed, the software was built using the latest version of OpenCV (3.4.0), and written in the low level language of C++ on a lightweight Linux operating system.
 
-**DATA REDUCTION STEP**
+## DATA REDUCTION STEP
 
 In order to determine the “what and where” of the images, the images are manipulated in various ways to obtain a binary threshold of the skin color.
 
@@ -111,7 +111,7 @@ This is achieved by individually dividing the width and height by three to obtai
 With defined regions, the “where” is then determined by checking the center of area with the regions above.
 
 
-**PARSING & PERFORMANCE**
+## PARSING & PERFORMANCE
 
 The program takes in two images, and determines if the meaning of the sequence is valid. If it is, an instruction is sent to the computer. The grammar or accepted sequences are as follows:
 
@@ -191,7 +191,7 @@ Program Output: UNKNOWN
 
 The previous examples should have outputted MOVED TO UPPER MIDDLE and MOVED TO UPPER RIGHT respectively, however the program assumed that they both failed because because the user moved his hand way to far up and ended up moving his fingers out of the frame, making it difficult for the program to compute the convex hull. Therefore, to fix this issue, the entire hand should be captured in all images.
 
-**ENHANCEMENTS**
+## ENHANCEMENTS
 
 To further improve and enhance the system, I have chosen to make the system real time.
 
