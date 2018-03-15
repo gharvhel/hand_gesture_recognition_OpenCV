@@ -1,3 +1,15 @@
+// =======================================================================
+//       Filename:  hand_gesture_recognition.cpp
+//    Description:  A program which will take as its input a sequence of
+//                  images of either a fist or a palm and then produce
+//                  from such sequence an instruction to the computer.
+//        Version:  1.0
+//        Created:  03/15/2018 01:57:51 AM
+//       Revision:  none
+//       Compiler:  clang++
+//         Author:  Gharvhel Carre (), gc2767@columbia.edu
+//   Organization:  Columbia University
+// =======================================================================
 
 #include <opencv2/opencv.hpp>
 #include <iostream>
